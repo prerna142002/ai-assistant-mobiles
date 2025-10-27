@@ -50,7 +50,6 @@ An AI-powered conversational agent that helps users find and compare mobile phon
      - Region: Choose the one closest to your users
      - Branch: `main` or your preferred branch
      - Build Command: `pip install -r requirements.txt`
-     - Start Command: `gunicorn app:app`
    - Add environment variables from your `.env` file
    - Click "Create Web Service"
 
