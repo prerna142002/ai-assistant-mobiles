@@ -15,7 +15,6 @@ An AI-powered conversational agent that helps users find and compare mobile phon
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
-   python -m spacy download en_core_web_sm
    ```
 3. Create a `.env` file based on `.env.example` and fill in your configuration
 4. Run the application:
@@ -26,20 +25,16 @@ An AI-powered conversational agent that helps users find and compare mobile phon
 ## Deployment
 
 ### Prerequisites
-- MongoDB Atlas account (or self-hosted MongoDB)
 - Python 3.8+
 - Git
+- Supabase
+- Gemini API Key
 
 ### Deploying to Render.com
 
 1. **Prepare your code**
    - Make sure all your changes are committed to a Git repository
    - Push your code to GitHub, GitLab, or Bitbucket
-
-2. **Set up MongoDB**
-   - Create a free MongoDB Atlas cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
-   - Create a database user and get the connection string
-   - Add the connection string to your environment variables as `MONGODB_URI`
 
 3. **Deploy to Render**
    - Sign up at [Render](https://render.com/) if you haven't already
@@ -62,7 +57,6 @@ An AI-powered conversational agent that helps users find and compare mobile phon
 Create a `.env` file in the root directory with the following variables:
 
 ```env
-MONGODB_URI=your_mongodb_connection_string
 FLASK_ENV=production
 SECRET_KEY=your-secret-key-here
 ```
@@ -72,14 +66,12 @@ SECRET_KEY=your-secret-key-here
 ```
 .
 ├── app.py                # Main application file
-├── agent.py              # Chat agent implementation
-├── data_loader.py        # Data loading and querying
 ├── requirements.txt      # Python dependencies
-├── Procfile             # Process manager configuration
-├── gunicorn_config.py   # Gunicorn configuration
 ├── .env.example         # Example environment variables
 ├── models/              # ML models for intent classification
 ├── utils/               # Utility functions
+├──────── agent.py              # Chat agent implementation
+├──────── data_loader.py        # Data loading and querying
 └── data/                # Sample mobile phone dataset
 ```
 
