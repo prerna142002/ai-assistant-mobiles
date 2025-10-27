@@ -4,8 +4,8 @@ import random
 import json
 from typing import Dict, List, Any, Optional, Tuple, Union
 from dataclasses import dataclass, asdict
-from data_loader import DataLoader
-from llm_integration import LLMIntegration, LLMResponse
+from utils.data_loader import DataLoader
+from utils.llm_integration import LLMIntegration, LLMResponse
 import datetime as dt
 
 @dataclass

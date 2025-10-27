@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request, jsonify, send_file, abort
-from agent import ShoppingChatAgent
-from data_loader import DataLoader
+from utils.agent import ShoppingChatAgent
+from utils.data_loader import DataLoader
 from io import BytesIO
 import os
 from functools import wraps
-from supabasedb import SupbaseHandler
+from data.supabasedb import SupbaseHandler
 
 app = Flask(__name__)
 
